@@ -1,0 +1,97 @@
+REST API-JSON
+GET/users - List all users - DONE
+GET/users/1- Get the user with id = 1 -DONE
+
+Get/users/2 - Get the user with id=2 -DONE
+POST/users - Create new user
+PATCH/users/1 = edit the user with id1
+DELETE/users/1 = delete the users with id=1
+
+
+we always prefer building a hybrid server therefore its important to keep this 
+in mind , that if we are building a simple server 
+/users - its build for the purpose of rendering the HTML document on the 
+browser ,
+howsoever if we want to build something , like a different mechanism
+where we want the browser to be actove on mobile applications as well we need a differen mechanism of 
+using an GET/api/users - List of all user JSON - done
+
+
+
+The main purpose of using /api is to clearly separate your backend (data provider) routes from your frontend (UI) routes.
+
+When you build a full-stack app (like a MERN project), you actually have two types of routes:
+
+Type	What it does	Example
+Frontend route	Displays a web page handled by React, Next.js, etc.	/users (React page showing user list)
+Backend route (API)	Sends JSON data handled by Express	/api/users (returns user data as JSON)
+
+So, using /api helps make it clear:
+
+“Hey, this route is not meant for users to view a webpage — it’s for the application to get data.”
+
+/api/users helps us in separating fronted from backend and it gives us clear information about whether its a backend PATCHfrom where we can extract data of a useror is this a simple frontend path where we can revier our frontend panel 
+or this meant for handling of data or is tyhis meant for the purpose of 
+showing dynamic ui
+
+
+
+
+for handling of dynamic path parametres, where we need to extract something from the json format particularly for example : 
+if we want to get a user with id1 we need to have a different way for doing so 
+GET/api/users/:id - example of a correct method 
+:id-variable in nature 
+
+
+// express is quite a noobdi in nature and does not even know how to handle middlewares 
+therefore we use middlewares for doing so in our database , if we dont vhave a dedicated
+ db , howsoever if we have so , we do direct appending of data , we can consider middleware as a intermediate plug-in componenet
+
+ // middleware is a middleman , according to them the request if its not valid will be rejected directly , and will not reach the app.get function 
+ its a function having an access of request-response methods or concepts and can act as a middleman
+ middleware fucntions are functions that have access to the request object (req) , the response object(res) , and the next middleware function in the applications request-response cycle ,
+ the next middleware is commonly denoted by a variable named next
+
+
+    // return res.json({mgs : "hello from anubhavpoop"});
+   // because of returning it here only , user could not move forward 
+   // with that request and hence could not get access to the routing or the routes 
+   // of apii thereby if we dont want to return anything in between u simply call next
+   // http headers , are important and acts as an enveloped for packing the data
+    in distinct packets and
+    header as an additional information for transmitting information
+   // from one point to another in distinct , 
+  // give an info or idea about from where the information is fetched , to where its being delievered and some other additional information....
+
+HTTP headers are an imp part of the API request and response as they represent the meta-data associated wuth the API request and response 
+Headers carry information for the request 
+and the response body
+
+
+// learn status codes in depth:-))
+HTTp responses status code indicates whether a specific 
+HTTP request has been successfully complete or not and is divide into 5 distinct classes
+informational responses (100-199)
+successful responses(200-299)
+redirection message(300-399)
+client error responses(400-499)  server is working perfectly , but there is an error on client-side
+server error responses( 500-599)...
+
+
+
+
+
+
+201-created
+No-SQL document based database
+strong support for aggregation pipes
+works on bson format 
+best for node.js based applications 
+// for handling mongodb and mongosh , mongosh we can use mongoshells for installing 
+mongodb database and we need to take into account how and where is it installeed
+if its installed in asus/local/appdata
+or if its present in program/files/
+mongoose is a package which leads us to connect to mongodb
+using node.js integration acts as  a connecting block
+
+
